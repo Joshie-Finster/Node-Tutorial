@@ -39,11 +39,11 @@ app.get('/:word/echo',(req,res)=>{
 
 app.get('/name', (res,req)=>{
   
-  var {first:firstName, last:lastName}= req.query;
+  var { first: firstName, last: lastName }= req.query;
   res.json({
     name : `${firstName} ${lastName}`
-  })
-})
+  });
+});
 app.use("/public", express.static(__dirname + "/public"));
 
 module.exports = app;
