@@ -37,7 +37,7 @@ app.get('/:word/echo',(req,res)=>{
   res.json({echo:word})
 });
 
-app.get('/name', (res,req)=>{
+app.get('/name', (req,res)=>{
   let string = req.query.first + ' ' + req.query.last
 
   res.json({
