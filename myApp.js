@@ -47,7 +47,12 @@ app.get('/name', (req,res)=>{
   res.json({
     name : string
   });
+
 });
+app.post('/name', (req,res)=>{
+  let string = req.body.first + ' ' + req.body.last;
+  res.json({name:string})
+})
 app.use("/public", express.static(__dirname + "/public"));
 
 module.exports = app;
