@@ -32,7 +32,10 @@ app.get('/now',
     
   }
 );
-
+app.get('/:word/echo',(req,res)=>{
+  const {word}=req.params;
+  res.json({echo:word})
+})
 app.use("/public", express.static(__dirname + "/public"));
 
 module.exports = app;
