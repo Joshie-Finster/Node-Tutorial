@@ -6,7 +6,7 @@ app.get( '/', (req,res) =>{
 })
 app.use("/public", express.static(__dirname + "/public"));
 app.get('/json', (req,res)=>{
-  if (process.env.VAR_NAME === "allCaps") {
+  if (process.env.VAR_NAME === "uppercase") {
     res = "Hello json".toUpperCase();
   } else {
     res = "Hello json";
