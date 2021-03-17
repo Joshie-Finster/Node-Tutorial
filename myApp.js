@@ -38,12 +38,10 @@ app.get('/:word/echo',(req,res)=>{
 });
 
 app.get('/name', (res,req)=>{
-  
-  var firstName = req.query.first;
-  var lastName = req.query.last;
-  
+  let string = req.query.first + ' ' + req.query.last
+
   res.json({
-    name : `${firstName} ${lastName}`
+    name : string
   });
 });
 app.use("/public", express.static(__dirname + "/public"));
